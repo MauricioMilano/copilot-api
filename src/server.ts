@@ -14,8 +14,11 @@ export const server = new Hono()
 
 server.use(logger())
 server.use(cors())
-server.use("*", apiKeyMiddleware)
-
+server.use("/chat*", apiKeyMiddleware)
+server.use("/models*", apiKeyMiddleware)
+server.use("/embeddings*", apiKeyMiddleware)
+server.use("/usage*", apiKeyMiddleware)
+server.use("/token*", apiKeyMiddleware)
 server.get("/", (c) => c.text("Server running"))
 
 server.route("/chat/completions", completionRoutes)
