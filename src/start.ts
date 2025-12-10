@@ -64,7 +64,7 @@ export async function runServer(options: RunServerOptions): Promise<void> {
     `Available models: \n${state.models?.data.map((model) => `- ${model.id}`).join("\n")}`,
   )
 
-  const serverUrl = `http://0.0.0.0:${options.port}`
+  const serverUrl = `http://localhost:${options.port}`
 
   if (options.claudeCode) {
     invariant(state.models, "Models should be loaded by now")

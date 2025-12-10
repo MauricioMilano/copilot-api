@@ -1,0 +1,29 @@
+{
+  // VS Code debug configurations for this project
+  // Use the "Run" button or select a configuration and press F5.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Run: npm run dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "start"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "API_KEY": "testkey"
+      }
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Run: npm run start",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "start"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {}
+    }
+  ]
+}

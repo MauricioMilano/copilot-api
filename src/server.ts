@@ -14,7 +14,7 @@ export const server = new Hono()
 
 server.use(logger())
 server.use(cors())
-server.use(apiKeyMiddleware())
+server.use("*", apiKeyMiddleware())
 
 server.get("/", (c) => c.text("Server running"))
 
