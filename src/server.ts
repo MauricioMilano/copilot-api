@@ -19,6 +19,8 @@ server.use("/models*", apiKeyMiddleware)
 server.use("/embeddings*", apiKeyMiddleware)
 server.use("/usage*", apiKeyMiddleware)
 server.use("/token*", apiKeyMiddleware)
+server.use("/v1/*", apiKeyMiddleware)
+
 server.get("/", (c) => c.text("Server running"))
 
 server.route("/chat/completions", completionRoutes)
