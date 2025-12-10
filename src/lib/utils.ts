@@ -22,5 +22,5 @@ export const cacheVSCodeVersion = async () => {
   const response = await getVSCodeVersion()
   state.vsCodeVersion = response
 
-  consola.info(`Using VSCode version: ${response}`)
+  consola.info(`<> Using VSCode version: ${response}`)
 }
